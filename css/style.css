@@ -327,12 +327,42 @@ html, body {
   font-size: calc(22px + 13 * ((100vw - 320px) / 980));
 }
 
+.main__button {
+  margin: 69px 0 0 0;
+}
+
+.main__button a {
+  display: block;
+  padding: 26px 0;
+  width: 254px;
+  height: 73px;
+  text-align: center;
+  border-radius: 3%;
+  background-color: #99c50a;
+  font-size: calc(15px + 4 * ((100vw - 320px) / 980));
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.main__button a:active {
+  margin: 2px 0 0 0;
+}
+
 @media (max-width: 873px) {
   .main {
     margin: 45px 0 0 0;
   }
   .main__text {
-    padding: 50px 0 0 0;
+    padding: 70px 0 0 0;
+  }
+  .main__button {
+    margin: 129px 0 0 0;
+  }
+  .main a {
+    width: 180px;
+    height: 50px;
+    border-radius: 4%;
+    padding: 17px 0;
   }
 }
 
