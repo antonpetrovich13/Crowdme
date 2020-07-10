@@ -2,6 +2,13 @@
 @import "nullstyle.scss";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
+$maxWidth: 1300;
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
 html,body{
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
@@ -181,23 +188,38 @@ html,body{
 
 //////////////////////  MAIN  //////////////////
 .main {
-	padding: 100px 0 0 0;
-	&__fon{
-		flex: 0 0 1300px;
+	margin: 95px 0 0 0;
+	min-height: 600px;
+	background: url(../img/back.png) 50%/ cover no-repeat;
+	opacity: 0.9;
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
-	img{
-		min-width: 100%;
+	&__text {
+		padding: 129px 0 0 0;
+		text-align: center;
+		@include adaptiv-font(44, 25);
+		line-height: 77px;
+		font-weight: 600;
+		color: #000;
+		& span{
+			font-weight: 400;
+			@include adaptiv-font(35, 22);
+		}
 	}
-	&__text {}
 	&__button {}
 }
 @media (max-width: 873px) {
 	.main{
-		padding: 40px 0 0 0;
+		margin: 45px 0 0 0;
+	}
+	.main__text{
+		padding: 50px 0 0 0;
 	}
 }
 .container {
 	max-width: 899px;
 	margin: 0 auto;
 }
-

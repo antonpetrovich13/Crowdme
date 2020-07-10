@@ -294,22 +294,45 @@ html, body {
 }
 
 .main {
-  padding: 100px 0 0 0;
+  margin: 95px 0 0 0;
+  min-height: 600px;
+  background: url(../img/back.png) 50%/cover no-repeat;
+  opacity: 0.9;
 }
 
-.main__fon {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 1300px;
-  flex: 0 0 1300px;
+.main__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.main img {
-  min-width: 100%;
+.main__text {
+  padding: 129px 0 0 0;
+  text-align: center;
+  font-size: calc(25px + 19 * ((100vw - 320px) / 980));
+  line-height: 77px;
+  font-weight: 600;
+  color: #000;
+}
+
+.main__text span {
+  font-weight: 400;
+  font-size: calc(22px + 13 * ((100vw - 320px) / 980));
 }
 
 @media (max-width: 873px) {
   .main {
-    padding: 40px 0 0 0;
+    margin: 45px 0 0 0;
+  }
+  .main__text {
+    padding: 50px 0 0 0;
   }
 }
 
