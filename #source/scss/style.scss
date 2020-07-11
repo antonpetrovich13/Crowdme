@@ -192,8 +192,7 @@ html,body{
 .main {
 	margin: 95px 0 0 0;
 	min-height: 600px;
-	background: url(../img/back.png) 50%/ cover no-repeat;
-	opacity: 0.9;
+	background: url(../img/fon.png) 50%/ cover no-repeat;
 	&__box {
 		display: flex;
 		flex-direction: column;
@@ -205,14 +204,14 @@ html,body{
 		@include adaptiv-font(44, 25);
 		line-height: 77px;
 		font-weight: 600;
-		color: #000;
+		color: #fff;
 		& span{
 			font-weight: 400;
 			@include adaptiv-font(35, 22);
 		}
 	}
 	&__button {
-		margin: 69px 0 0 0;
+		margin: 119px 0 0 0;
 		& a{
 			display: block;
 			padding: 26px 0;
@@ -235,16 +234,21 @@ html,body{
 		margin: 45px 0 0 0;
 	}
 	.main__text{
-		padding: 70px 0 0 0;
+		padding: 100px 0 0 0;
 	}
 	.main__button{
-		margin: 129px 0 0 0;
+		margin: 179px 0 0 0;
 	}
 	.main a{
 			width: 180px;
 			height: 50px;
 			border-radius: 4%;
 			padding: 17px 0 ;
+	}
+}
+@media (max-width: 538px) {
+	.main__text{
+		padding: 60px 5px 0 5px ;
 	}
 }
 .container {
