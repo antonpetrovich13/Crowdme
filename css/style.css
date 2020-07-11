@@ -369,7 +369,7 @@ html, body {
 
 @media (max-width: 538px) {
   .main__text {
-    padding: 60px 5px 0 5px;
+    padding: 40px 5px 0 5px;
   }
   .main__button {
     margin: 135px 0 0 0;
