@@ -15,6 +15,16 @@ html,body{
 	font-family: 'Open Sans', sans-serif;
 }
 .wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.ibg{
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		img{display: none};
 }
 .header {
 	position: fixed;
@@ -190,75 +200,92 @@ html,body{
 }
 
 //////////////////////  MAIN  //////////////////
+
 .main {
-	margin: 95px 0 0 0;
-	min-height: 600px;
-	background: url(../img/fon.png) 50%/ cover no-repeat;
-	&__box {
+	min-height: 100vh;
+	&__content {
+		text-align: center;
+		padding: 0 10px;
+		position: relative;
+		z-index: 60;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 	}
 	&__text {
-		padding: 129px 0 0 0;
-		text-align: center;
-		@include adaptiv-font(44, 25);
+		padding: 170px 0 0 0;
+		@include adaptiv-font(49, 20);
 		line-height: 77px;
 		font-weight: 600;
-		color: #fff;
+		color: #ffffff;
 		& span{
+			@include adaptiv-font(35, 15);
 			font-weight: 400;
-			@include adaptiv-font(35, 22);
 		}
 	}
 	&__button {
-		margin: 119px 0 0 0;
+		margin: 160px 0 0 0;
 		& a{
 			display: block;
-			padding: 26px 0;
 			width: 254px;
 			height: 73px;
-			text-align: center;
-			border-radius: 3%;
-			background-color: #99c50a;
-			@include adaptiv-font(19, 15);
+			color: #fff;
+			@include adaptiv-font(19, 13);
 			font-weight: 600;
-			color: #ffffff;
+			background-color: #99c50a;
+			border-radius: 3%;
+			padding: 24px 0;
 			&:active{
 				margin: 2px 0 0 0;
 			}
 		}
 	}
+	&__slider {}
 }
 @media (max-width: 873px) {
-	.main{
-		margin: 45px 0 0 0;
-	}
 	.main__text{
-		padding: 100px 0 0 0;
+		padding: 120px 0 0 0;
 	}
 	.main__button{
-		margin: 179px 0 0 0;
-	}
-	.main a{
-			width: 180px;
-			height: 50px;
-			border-radius: 4%;
-			padding: 17px 0 ;
+		margin: 200px 0 0 0;
 	}
 }
 @media (max-width: 538px) {
 	.main__text{
-		padding: 40px 5px 0 5px ;
+		padding: 100px 0 0 0;
 	}
-	.main__button{
-		margin: 135px 0 0 0;
+		.main__button{
+		& a{
+			width: 150px;
+			height: 50px;
+			padding: 18px 0;
+		}
 	}
 }
-.container {
-	max-width: 899px;
-	margin: 0 auto;
+
+.slider {
+	&__slide {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////////////////////  PRESENTATION  /////////////////////////
 
 .presentation {
