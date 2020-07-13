@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -384,7 +385,7 @@ html, body {
 .presentation {
   min-height: 100%;
   margin: 99px 0 0 0;
-  padding: 0 0 167px 0;
+  padding: 0 0 99px 0;
 }
 
 .presentation__box {
@@ -448,6 +449,7 @@ html, body {
 @media (max-width: 538px) {
   .presentation {
     margin: 50px 0 0 0;
+    padding: 0 0 50px 0;
   }
   .presentation__title {
     margin: 32px 0 0 0;
@@ -459,4 +461,106 @@ html, body {
   .presentation__subtitle p {
     padding: 20px 0 0 0;
   }
+}
+
+.find {
+  height: 100%;
+}
+
+.find__slide {
+  min-width: 0;
+  overflow: hidden;
+  background-color: #e2f8ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 46px 73px 47px 141px;
+}
+
+.find__image {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 133px;
+  flex: 0 0 133px;
+}
+
+.find__image img {
+  max-width: 100%;
+}
+
+.find__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: calc(15px + 8 * ((100vw - 320px) / 980));
+  line-height: 1.2;
+  font-weight: 600;
+  color: #515151;
+}
+
+.find__subtitle {
+  margin: 34px 0 0 0;
+  max-width: 300px;
+  font-size: calc(13px + 4 * ((100vw - 320px) / 980));
+  line-height: 1.5;
+  color: #515151;
+}
+
+.find__button {
+  margin: 31px 0 0 0;
+}
+
+.find__button a {
+  display: block;
+  text-align: center;
+  font-size: calc(12px + 4 * ((100vw - 320px) / 980));
+  line-height: 1.2;
+  font-weight: 600;
+  color: #ffffff;
+  width: 187px;
+  height: 51px;
+  background-color: #26a6d1;
+  border-radius: 3%;
+  padding: 13px 0;
+}
+
+@media (max-width: 873px) {
+  .find__button a {
+    padding: 16px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .find__slide {
+    padding: 46px 73px 47px 80px;
+  }
+  .find__button a {
+    width: 150px;
+  }
+}
+
+.find__slide_gr {
+  background-color: #f5f9eb;
+}
+
+.find__button_gr a {
+  background-color: #add136;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.find__slides .slick-arrow {
+  font-size: 0;
 }
