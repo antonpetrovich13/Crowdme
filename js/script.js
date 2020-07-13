@@ -6,3 +6,13 @@ $(document).ready(function() {
 		$('body').toggleClass('lock');
 	});
 });
+
+$(document).ready(function(){
+	$('.find__slides').slick({
+		autoplay:true,
+		pauseOnFocus:true,
+		pausOnHover:true,
+		speed:3000,
+		autoplaySpeed:3000,
+	});
+});
