@@ -12,7 +12,6 @@ $(document).ready(function(){
 		autoplay:true,
 		speed:3000,
 		autoplaySpeed:3000,
-		
 	});
 });
 
