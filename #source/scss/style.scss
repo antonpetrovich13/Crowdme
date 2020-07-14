@@ -201,80 +201,40 @@ html,body{
 
 //////////////////////  MAIN  //////////////////
 
-.main {
-	min-height: 100vh;
-	&__content {
-		text-align: center;
-		padding: 0 10px;
-		position: relative;
-		z-index: 60;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	&__text {
-		padding: 170px 0 0 0;
-		@include adaptiv-font(49, 20);
-		line-height: 77px;
-		font-weight: 600;
-		color: #ffffff;
-		& span{
-			@include adaptiv-font(35, 15);
-			font-weight: 400;
-		}
-	}
-	&__button {
-		margin: 160px 0 0 0;
-		& a{
-			display: block;
-			width: 254px;
-			height: 73px;
-			color: #fff;
-			@include adaptiv-font(19, 13);
-			font-weight: 600;
-			background-color: #99c50a;
-			border-radius: 3%;
-			padding: 24px 0;
-			&:active{
-				margin: 2px 0 0 0;
-			}
-		}
-	}
-	&__slider {}
-}
-@media (max-width: 873px) {
-	.main__text{
-		padding: 120px 0 0 0;
-	}
-	.main__button{
-		margin: 200px 0 0 0;
-	}
-}
-@media (max-width: 538px) {
-	.main__text{
-		padding: 100px 0 0 0;
-	}
-		.main__button{
-		& a{
-			width: 150px;
-			height: 50px;
-			padding: 18px 0;
-		}
-	}
-}
 
 .slider {
+	min-height: 100vh;
+	display: flex;
+	position: relative;
 	&__slide {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
+	}
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	.slick-arrow{
+		font-size: 0;
 	}
 }
 
-
+.slick-list {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.slick-track{
+		display: flex;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+}
+.slick-slide{
+	position: relative;
+}
 
 
 
@@ -314,6 +274,7 @@ html,body{
 	}
 	&__subtitle {
 		margin: 20px 5px 0 5px;
+		max-width: 800px;
 		opacity: 0.7;
 		@include adaptiv-font(19, 13);
 		line-height: 1.2;
@@ -436,13 +397,6 @@ html,body{
 	}
 }
 
-.slick-list {
-	overflow: hidden;
-}
-/* Лента слайдов */
-.slick-track{
-	display: flex;
-}
 .find__slides{
 	.slick-arrow{
 		font-size: 0;

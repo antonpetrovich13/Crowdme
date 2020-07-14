@@ -318,89 +318,44 @@ html, body {
   }
 }
 
-.main {
+.slider {
   min-height: 100vh;
-}
-
-.main__content {
-  text-align: center;
-  padding: 0 10px;
-  position: relative;
-  z-index: 60;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  position: relative;
 }
 
-.main__text {
-  padding: 170px 0 0 0;
-  font-size: calc(20px + 29 * ((100vw - 320px) / 980));
-  line-height: 77px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.main__text span {
-  font-size: calc(15px + 20 * ((100vw - 320px) / 980));
-  font-weight: 400;
-}
-
-.main__button {
-  margin: 160px 0 0 0;
-}
-
-.main__button a {
-  display: block;
-  width: 254px;
-  height: 73px;
-  color: #fff;
-  font-size: calc(13px + 6 * ((100vw - 320px) / 980));
-  font-weight: 600;
-  background-color: #99c50a;
-  border-radius: 3%;
-  padding: 24px 0;
-}
-
-.main__button a:active {
-  margin: 2px 0 0 0;
-}
-
-@media (max-width: 873px) {
-  .main__text {
-    padding: 120px 0 0 0;
-  }
-  .main__button {
-    margin: 200px 0 0 0;
-  }
-}
-
-@media (max-width: 538px) {
-  .main__text {
-    padding: 100px 0 0 0;
-  }
-  .main__button a {
-    width: 150px;
-    height: 50px;
-    padding: 18px 0;
-  }
-}
-
-.slider__slide {
+.slider__image {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.slider .slick-arrow {
+  font-size: 0;
+}
+
+.slick-list {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slick-slide {
+  position: relative;
 }
 
 .presentation {
@@ -444,6 +399,7 @@ html, body {
 
 .presentation__subtitle {
   margin: 20px 5px 0 5px;
+  max-width: 800px;
   opacity: 0.7;
   font-size: calc(13px + 6 * ((100vw - 320px) / 980));
   line-height: 1.2;
@@ -569,17 +525,6 @@ html, body {
 
 .find__button_gr a {
   background-color: #add136;
-}
-
-.slick-list {
-  overflow: hidden;
-}
-
-/* Лента слайдов */
-.slick-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .find__slides .slick-arrow {

@@ -17,7 +17,16 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-	$('.main__slide').slick();
+	$('.slider').slick({
+		autoplay:true,
+		speed:4000,
+		autoplaySpeed:4000,
+		pauseOnFocus:false,
+		pauseOnHover:false,
+		pauseOnDotsHover:false,
+		draggable:false,
+		swipe:false,
+	});
 });
 
 function ibg(){
