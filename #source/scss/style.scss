@@ -233,12 +233,75 @@ html,body{
 		overflow: hidden;
 }
 .slick-slide{
+	width: 100%;
+	overflow: hidden;
 	position: relative;
 }
 
+////////////////////  Title  ///////////////////
 
-
-
+.title {
+	&__box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+		}
+	&__wrap{
+		position: absolute;
+		top: 27%;
+	}
+	&__text {
+		@include adaptiv-font(47, 20);
+		line-height: 77px;
+		font-weight: 600;
+		color: #fff;
+		& span{
+			@include adaptiv-font(30, 15);
+			font-weight: 400;
+		}
+	}
+	&__button {
+		margin: 79px 0 0 0;
+		& a{
+			padding: 25px 0;
+			display: inline-block;
+			@include adaptiv-font(19, 13);
+			font-weight: 600;
+			color: #ffffff;
+			width: 254px;
+			height: 73px;
+			background-color: #99c50a;
+			border-radius: 5%;
+			&:active{
+				margin: 2px 0 0 0;
+			}
+		}
+	}
+}
+@media (max-width: 873px) {
+	.title__wrap{
+		top: 20%;
+	}
+	.title__button{
+		margin: 109px;
+	}
+}
+@media (max-width: 500px) {
+	.title__button{
+		& a{
+			padding: 11px 0;
+			line-height: 1.2;
+			width: 102px;
+			height: 50px;
+		}
+	}
+}
+@media (max-height: 470px) {
+	.title__button{
+		margin: 40px;
+	}
+}
 
 
 

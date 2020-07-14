@@ -355,7 +355,84 @@ html, body {
 }
 
 .slick-slide {
+  width: 100%;
+  overflow: hidden;
   position: relative;
+}
+
+.title__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title__wrap {
+  position: absolute;
+  top: 27%;
+}
+
+.title__text {
+  font-size: calc(20px + 27 * ((100vw - 320px) / 980));
+  line-height: 77px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.title__text span {
+  font-size: calc(15px + 15 * ((100vw - 320px) / 980));
+  font-weight: 400;
+}
+
+.title__button {
+  margin: 79px 0 0 0;
+}
+
+.title__button a {
+  padding: 25px 0;
+  display: inline-block;
+  font-size: calc(13px + 6 * ((100vw - 320px) / 980));
+  font-weight: 600;
+  color: #ffffff;
+  width: 254px;
+  height: 73px;
+  background-color: #99c50a;
+  border-radius: 5%;
+}
+
+.title__button a:active {
+  margin: 2px 0 0 0;
+}
+
+@media (max-width: 873px) {
+  .title__wrap {
+    top: 20%;
+  }
+  .title__button {
+    margin: 109px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title__button a {
+    padding: 11px 0;
+    line-height: 1.2;
+    width: 102px;
+    height: 50px;
+  }
+}
+
+@media (max-height: 470px) {
+  .title__button {
+    margin: 40px;
+  }
 }
 
 .presentation {
